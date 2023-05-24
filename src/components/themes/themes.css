@@ -1,0 +1,30 @@
+.category-title {
+    font-size: calc(5px + 3vmin);
+    margin-top: 10vh;
+}
+
+.div-flex {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+}
+
+.link {
+    color: #000;
+    text-decoration: none;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.lesson-title {
+    margin: 0;
+    transition: 0.5s;
+    font-weight: 500;
+    font-size: calc(5px + 2vmin);
+}
+
+.lesson-title:hover {
+    color: #fff;
+    background-color: #1eb2a6;
+    border-radius: 5px;
+}

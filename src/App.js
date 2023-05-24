@@ -4,19 +4,14 @@ import { Header } from './components/header/Header';
 import { Footer } from './components/footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/home/Home';
-import { Login } from './pages/auth/Login';
-import { Register } from './pages/auth/Register';
-import { Logout } from './pages/auth/Logout';
+import { Login, Register, Logout } from './pages/auth';
 import { About } from './components/about/About';
 import { Feedback } from './components/feedback/Feedback';
 import { Account } from './pages/account/Account';
 import { Categories } from './components/categories/Categories';
-import { Graphs } from './components/themes/Graphs';
-import { Sorts } from './components/themes/Sorts';
-import { Search } from './components/themes/Search';
-import { Structures } from './components/themes/Structures';
-import { Articles } from './components/articles/Articles';
-
+import { Structures, Graphs, Sorts, Searches } from './components/themes';
+import { Structure, Graph, Sort, Search } from './components/articles';
+import { PageNotFound } from './components/not_found/PageNotFound';
 
 function App() {
   return (
@@ -32,23 +27,23 @@ function App() {
           <Route path='about' element={<About />} />
           <Route path='feedback' element={<Feedback />} />
           <Route path='categories' element={<Categories />} />
-          <Route path='categories/graphs' element={<Graphs />} />
-          <Route path='categories/sorts' element={<Sorts />} />
-          <Route path='categories/search' element={<Search />} />
-          <Route path='categories/structures' element={<Structures />} />
-          <Route
-            // this path will match URLs like
-            // - /teams/hotspur
-            // - /teams/real
-            path="/categories/structures/:lessonId"
-            // the matching param will be available to the loader
-            loader={({ params }) => {
-              console.log(params.lessonId); // "hotspur"
-            }}
-            // and the action
-            action={({ params }) => { }}
-            element={<Articles />}
-          />
+          <Route path='categories/graphs'>
+            <Route index element={<Graphs />} />
+            <Route path=':lessonId' element={<Graph />} />
+          </Route>
+          <Route path='categories/sorts'>
+            <Route index element={<Sorts />} />
+            <Route path=':lessonId' element={<Sort />} />
+          </Route>
+          <Route path='categories/searches'>
+            <Route index element={<Searches />} />
+            <Route path=':lessonId' element={<Search />} />
+          </Route>
+          <Route path='categories/structures'>
+            <Route index element={<Structures />} />
+            <Route path=':lessonId' element={<Structure />} />
+          </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -57,4 +52,3 @@ function App() {
 }
 
 export default App;
-

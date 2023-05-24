@@ -40,4 +40,5 @@
   display: inherit;
   justify-content: space-between;
   padding-right: 10vw;
+  column-gap: 1vmin;
 }
