@@ -35,7 +35,7 @@ export const categories = [
 export const structures = [
   {
     id: "1",
-    title: "массив и двумерный массив",
+    title: "массив и динамический массив",
   },
   {
     id: "2",

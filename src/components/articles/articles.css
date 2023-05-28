@@ -1,0 +1,93 @@
+.div-article {
+    width: 85%;
+    margin-inline: auto;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-top: 10vh;
+}
+
+.div-article h2 {
+    font-size: calc(5px + 2vmin);
+    background-color: #1eb2a6;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+.div-article h3 {
+    margin-inline: 1vmin;
+    text-align: left;
+    font-size: calc(5px + 1.5vmin);
+}
+
+.div-article p {
+    margin-inline: 1vmin;
+    text-align: left;
+    font-size: calc(5px + 1.25vmin);
+}
+
+.div-article img {
+    max-width: calc(100% - 2vmin);
+    margin-inline: 1vmin;
+}
+
+.commentary {
+    color: gray;
+    font-size: calc(5px + 1vmin);
+}
+
+.console {
+    background-color: #000;
+    color: #fff;
+    margin-inline: 1vmin;
+    border-radius: 10px;
+    overflow: auto;
+    position: relative;
+}
+
+.console-header {
+    position: absolute;
+    top: 5%;
+    margin-inline: 1vmin;
+    display: flex;
+}
+
+.console-button {
+    width: calc(5px + 1vmin);
+    height: calc(5px + 1vmin);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.console-button.red {
+    background-color: #f25f5c;
+}
+
+.console-button.yellow {
+    background-color: #ffe156;
+}
+
+.console-button.green {
+    background-color: #63c64d;
+}
+
+.console pre {
+    margin-top: calc(1.25vmin + 1.25vmax);
+    margin-inline: 1vmin;
+    text-align: left;
+    font-size: calc(5px + 1.25vmin);
+}
+
+.console-cursor {
+    display: inline-block;
+    width: calc(2.5px + 0.625vmin);
+    height: calc(5px + 1.25vmin);
+    background-color: #fff;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
