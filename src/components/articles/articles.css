@@ -20,6 +20,12 @@
     font-size: calc(5px + 1.5vmin);
 }
 
+.div-article h4 {
+    margin-inline: 1vmin;
+    text-align: left;
+    font-size: calc(5px + 1.25vmin);
+}
+
 .div-article p {
     margin-inline: 1vmin;
     text-align: left;
@@ -43,11 +49,12 @@
     border-radius: 10px;
     overflow: auto;
     position: relative;
+    margin-bottom: 1vmin;
 }
 
 .console-header {
     position: absolute;
-    top: 5%;
+    top: 5px;
     margin-inline: 1vmin;
     display: flex;
 }
@@ -87,7 +94,15 @@
 }
 
 @keyframes blink {
-    0% {opacity: 1;}
-    50% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

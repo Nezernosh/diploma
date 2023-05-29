@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { Structure1, Structure2, Structure3, Structure4, Structure5, Structure6, Structure7, Structure8 } from './';
 import '../articles.css';
 import { PageNotFound } from '../../not_found/PageNotFound';
+import Quiz from '../../quiz/Quiz';
+import { structuresQuestions } from '../quizQuestions';
 
 export function Structure() {
     const { lessonId } = useParams();
@@ -24,6 +26,8 @@ export function Structure() {
             return <Structure7 />;
         case '8':
             return <Structure8 />;
+        case 'quiz':
+            return <Quiz questions={structuresQuestions} />
         default:
             return <PageNotFound />;
     }

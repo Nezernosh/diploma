@@ -65,6 +65,10 @@ export const structures = [
     id: "8",
     title: "графы",
   },
+  {
+    id: "quiz",
+    title: "тест по структурам",
+  },
 ]
 export const sorts = [
   {
@@ -82,6 +86,10 @@ export const sorts = [
   {
     id: "4",
     title: "сортировка слиянием",
+  },
+  {
+    id: "quiz",
+    title: "тест по сортировкам",
   },
 ]
 export const graphs = [
@@ -105,6 +113,10 @@ export const graphs = [
     id: "5",
     title: "алгоритм Крускала",
   },
+  {
+    id: "quiz",
+    title: "тест по графам",
+  },
 ]
 export const searches = [
   {
@@ -114,5 +126,9 @@ export const searches = [
   {
     id: "2",
     title: "алгоритм Кнута-Морриса-Пратта",
+  },
+  {
+    id: "quiz",
+    title: "тест по поиску",
   },
 ]

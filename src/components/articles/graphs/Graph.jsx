@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom';
 import { Graph1, Graph2, Graph3, Graph4, Graph5 } from './';
 import '../articles.css';
 import { PageNotFound } from '../../not_found/PageNotFound';
+import Quiz from '../../quiz/Quiz';
+import { graphsQuestions } from '../quizQuestions';
 
 export function Graph() {
     const { lessonId } = useParams();
@@ -18,6 +20,8 @@ export function Graph() {
             return <Graph4 />;
         case '5':
             return <Graph5 />;
+        case 'quiz':
+            return <Quiz questions={graphsQuestions} />
         default:
             return <PageNotFound />;
     }

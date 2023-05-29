@@ -1,5 +1,4 @@
 import React from 'react';
-import './structure.css';
 
 export function Structure2() {
     return (
