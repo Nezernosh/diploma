@@ -1,6 +1,8 @@
 import React from 'react';
 import '../articles.css';
 import GraphsExample from './GraphsExample';
+import Comments from "../../comments/Comments";
+import { structureEightComments } from '../../comments/getComments';
 
 export function Structure8() {
     return (
@@ -123,6 +125,11 @@ public class Graph
                 <p>● Для анализа соотносящейся друг с другом информации.</p>
                 <p>● Для построения маршрута из точки А в точку Б.</p>
             </div>
+            <Comments
+                getCommentsApi={structureEightComments}
+                commentsUrl="http://localhost:3004/comments"
+                currentUserId="2"
+            />
         </>
     )
 }

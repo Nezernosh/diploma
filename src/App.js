@@ -7,7 +7,7 @@ import { Home } from './pages/home/Home';
 import { Login, Register, Logout } from './pages/auth';
 import { About } from './components/about/About';
 import { Feedback } from './components/feedback/Feedback';
-import { Account } from './pages/account/Account';
+import Account from './pages/account/Account';
 import { Categories } from './components/categories/Categories';
 import { Structures, Graphs, Sorts, Searches } from './components/themes';
 import { Structure, Graph, Sort, Search } from './components/articles';

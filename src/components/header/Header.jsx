@@ -15,7 +15,7 @@ export const Header = () => {
         </div>
         <div className='navigation'>
           <NavLink className='Header-link' to={"/categories"}><BiBookContent /> Содержание</NavLink>
-          <NavLink className='Header-link' to={"/account"}><MdAccountBox /> Вход</NavLink>
+          <NavLink className='Header-link' to={"/logout"}><MdAccountBox /> Павел</NavLink>
         </div>
       </header>
     </>

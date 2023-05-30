@@ -2,6 +2,8 @@ import React from 'react';
 import '../articles.css';
 import DFS from './DFS';
 import { DirectedGraph } from './DirectedGraph';
+import Comments from "../../comments/Comments";
+import { graphSecondComments } from '../../comments/getComments';
 
 export function Graph2() {
     return (
@@ -147,9 +149,14 @@ int main() {
                         </code>
                     </pre>
                 </div>
-                <p>Временная сложность алгоритма DFS представлена ​​в виде O (V + E), где V — количество узлов, а E — количество ребер. 
+                <p>Временная сложность алгоритма DFS представлена ​​в виде O (V + E), где V — количество узлов, а E — количество ребер.
                     Пространственная сложность алгоритма равна O(V).</p>
             </div>
+            <Comments
+                getCommentsApi={graphSecondComments}
+                commentsUrl="http://localhost:3004/comments"
+                currentUserId="2"
+            />
         </>
     )
 }

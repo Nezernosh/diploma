@@ -1,5 +1,7 @@
 import React from 'react';
 import '../articles.css';
+import Comments from "../../comments/Comments";
+import { structureFirstComments } from '../../comments/getComments';
 
 export function Structure1() {
     return (
@@ -62,6 +64,11 @@ let fruits = ["Яблоко", "Апельсин", "Слива"];`}
                 <p>● В качестве блоков для структур данных.</p>
                 <p>● Для хранения неопределённого количества элементов.</p>
             </div>
+            <Comments
+                getCommentsApi={structureFirstComments}
+                commentsUrl="http://localhost:3004/comments"
+                currentUserId="2"
+            />
         </>
     )
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import '../articles.css';
 import Qsort from './Qsort';
+import Comments from "../../comments/Comments";
+import { sortThirdComments } from '../../comments/getComments';
 
 export function Sort3() {
     return (
@@ -99,6 +101,11 @@ void quickSortR(T* a, long N) {
                     </pre>
                 </div>
             </div>
+            <Comments
+                getCommentsApi={sortThirdComments}
+                commentsUrl="http://localhost:3004/comments"
+                currentUserId="2"
+            />
         </>
     )
 }
