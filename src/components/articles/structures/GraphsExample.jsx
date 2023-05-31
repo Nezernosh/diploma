@@ -78,13 +78,13 @@ const GraphsExample = () => {
         const simulationUndirected = d3
             .forceSimulation(undirectedData.nodes)
             .force('link', d3.forceLink(undirectedData.links).id((d) => d.id))
-            .force('charge', d3.forceManyBody().strength(-50))
+            .force('charge', d3.forceManyBody().strength(-25))
             .force('center', d3.forceCenter(undirectedWidth / 2, undirectedHeight / 2));
 
         const simulationDirected = d3
             .forceSimulation(directedData.nodes)
             .force('link', d3.forceLink(directedData.links).id((d) => d.id))
-            .force('charge', d3.forceManyBody().strength(-50))
+            .force('charge', d3.forceManyBody().strength(-25))
             .force('center', d3.forceCenter(directedWidth / 2, directedHeight / 2));
 
         const nodeRadius = Math.min(undirectedWidth, undirectedHeight) * 0.05;

@@ -27,7 +27,7 @@ export const categories = [
     id: "4",
     cover: "./images/themes/o4.png",
     hoverCover: "./images/themes/o4.1.png",
-    categoryName: "Поиск элементов",
+    categoryName: "Поиск подстроки в строке",
     categorySize: "2 урока",
     link: "searches",
   },
